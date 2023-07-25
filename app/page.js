@@ -1,13 +1,6 @@
-import { getExhibitions } from "./helpers/sanity-server";
+import Head from "next/head";
+import styled, { css } from "styled-components";
 
-export default async function Home() {
-    const exhibitions = await getExhibitions();
-    console.log(exhibitions);
-    return (
-        <main>
-            {exhibitions.map((exhibition) => {
-                return <h2>{exhibition.title}</h2>;
-            })}
-        </main>
-    );
+export default function Home() {
+    return <main>hello</main>;
 }
