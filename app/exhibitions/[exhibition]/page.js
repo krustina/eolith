@@ -4,3 +4,4 @@ export default async function Exhibition({ params }) {
 
     return <div>exhibition page</div>;
 }
+//TODO: make page per slug

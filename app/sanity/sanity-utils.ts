@@ -9,14 +9,9 @@ export async function getExhibitions() {
 
     return client.fetch(
         groq`
-        *[_type == 'exhibitions']{
-                _id,
-                title, 
-                "slug": slug.current, 
-                current, 
-                artists, 
-                startDate, 
-                endDate }`
+        *[_type == "exhibitions" ] {
+            ...
+        }`
     );
 }
 
@@ -29,11 +24,9 @@ export async function getHomePage() {
 
     return client.fetch(
         groq`
-        *[_type == 'homepage']{
-                _id,
-                announcement,
-                announcementVisible,
-                "images": landingImg[].asset->url,}`
+        *[_type == "homepage" ] {
+            ...
+        }[0]`
     );
 }
 
@@ -46,10 +39,9 @@ export async function getAbout() {
 
     return client.fetch(
         groq`
-        *[_type == 'about']{
-                _id,
-                aboutUs,
-                contact,}`
+        *[_type == "about" ] {
+            ...
+        }[0]`
     );
 }
 
@@ -62,11 +54,9 @@ export async function getPress() {
 
     return client.fetch(
         groq`
-        *[_type == 'press']{
-                _id,
-                title,
-                pressDate,
-                link}`
+        *[_type == "press" ] {
+            ...
+        }`
     );
 }
 
@@ -79,11 +69,8 @@ export async function getSettings() {
 
     return client.fetch(
         groq`
-         *[_type == 'global' ]{
-            _id,
-            logo,
-            metaImg,
-            meta,
-        }`
+         *[_type == "global" ] {
+            ...
+        }[0]`
     );
 }
