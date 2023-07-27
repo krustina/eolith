@@ -25,7 +25,10 @@ export async function getHomePage() {
     return client.fetch(
         groq`
         *[_type == "homepage" ] {
-            ...
+            _id,
+            announcement,
+            announcementVisible,
+            "landingImg": landingImg.asset->url,
         }[0]`
     );
 }
@@ -70,7 +73,13 @@ export async function getSettings() {
     return client.fetch(
         groq`
          *[_type == "global" ] {
-            ...
+            _id,
+            meta,
+            backgroundColour,
+            primaryTextColour,
+            secondaryTextColour,
+            "metaImg": metaImg.asset->url,
+            "logo": logo.asset->url
         }[0]`
     );
 }

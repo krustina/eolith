@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Nav from "./navbar";
+import GlobalStyles from "./styles/global.css";
 
 export const metadata = {
     title: "eolith",
@@ -8,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <Nav />
+                {children}
+            </body>
         </html>
     );
 }
