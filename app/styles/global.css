@@ -1,20 +1,8 @@
-/* //TODO add global props from cms
-//fonts
-//type hierarchies
-//colours
- */
-
-html {
-    height: 100vh;
-}
-body {
-    height: 100%;
-}
-
 html,
 body {
     padding: 0;
     margin: 0;
+    height: 100vh;
     font-family: "Arial Narrow", Arial, sans-serif;
 }
 

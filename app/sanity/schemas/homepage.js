@@ -20,7 +20,6 @@ export default {
             description:
                 "Image you see on landing. Add logo file (.JPEG, .SVG, .PNG, .GIF)",
             type: "image",
-            validation: (Rule) => Rule.required(),
         },
     ],
 };

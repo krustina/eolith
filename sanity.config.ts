@@ -13,10 +13,11 @@ const config = defineConfig({
     basePath: "/admin",
     plugins: [
         colorInput(),
-        visionTool(),
+
         deskTool({
             structure: deskStructure,
         }),
+        visionTool(),
     ],
     schema: {
         types: schemas,
