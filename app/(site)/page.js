@@ -1,6 +1,7 @@
 "use client";
 
 import { getLatestExhibition } from "../sanity/sanity-utils";
+import { PortableText } from "@portabletext/react";
 
 export default async function Home() {
     const latest = await getLatestExhibition();
@@ -31,8 +32,6 @@ export default async function Home() {
                 </div>
             </div>
 
-            {latest.heroImg && <img className="hero" src={latest.heroImg} />}
-
             {latest.documentation &&
                 latest.documentation.map((image) => (
                     <div className="img-container">
@@ -40,25 +39,24 @@ export default async function Home() {
                         <figcaption>{image.caption}</figcaption>
                     </div>
                 ))}
+            {latest.exhibitionText && (
+                <div className="text">
+                    <PortableText value={latest.exhibitionText} />
+                </div>
+            )}
 
-            {latest.exhibitionText &&
-                latest.exhibitionText.map((paragraph, key) => {
-                    <p key={key}>
-                        {paragraph.children.map((child) => (
-                            <>{child.text}</>
-                        ))}
-                    </p>;
-                })}
+            {latest.heroImg && <img className="hero" src={latest.heroImg} />}
+
             {latest.press && (
                 <>
                     <p>Press</p>
+                    <br />
                     {latest.press.map((source) => (
                         <div className="info">
+                            <p>{source.source}</p>
                             <a href={source.link} target="_blank">
                                 {source.title}
                             </a>
-                            <p>{source.source}</p>
-                            <p>{source.pressDate}</p>
                         </div>
                     ))}
                 </>

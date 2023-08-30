@@ -1,6 +1,7 @@
 "use client";
 
 import { getExhibition } from "../../../sanity/sanity-utils";
+import { PortableText } from "@portabletext/react";
 
 export default async function Exhibition({ params }) {
     const slug = params.exhibition;
@@ -33,10 +34,6 @@ export default async function Exhibition({ params }) {
                 </div>
             </div>
 
-            {exhibition.heroImg && (
-                <img className="hero" src={exhibition.heroImg} />
-            )}
-
             {exhibition.documentation &&
                 exhibition.documentation.map((image) => (
                     <div className="img-container">
@@ -44,25 +41,26 @@ export default async function Exhibition({ params }) {
                         <figcaption>{image.caption}</figcaption>
                     </div>
                 ))}
+            {exhibition.exhibitionText && (
+                <div className="text">
+                    <PortableText value={exhibition.exhibitionText} />
+                </div>
+            )}
 
-            {exhibition.exhibitionText &&
-                exhibition.exhibitionText.map((paragraph, key) => {
-                    <p key={key}>
-                        {paragraph.children.map((child) => (
-                            <>{child.text}</>
-                        ))}
-                    </p>;
-                })}
+            {exhibition.heroImg && (
+                <img className="hero" src={exhibition.heroImg} />
+            )}
+
             {exhibition.press && (
                 <>
                     <p>Press</p>
+                    <br />
                     {exhibition.press.map((source) => (
                         <div className="info">
+                            <p>{source.source}</p>
                             <a href={source.link} target="_blank">
                                 {source.title}
                             </a>
-                            <p>{source.source}</p>
-                            <p>{source.pressDate}</p>
                         </div>
                     ))}
                 </>

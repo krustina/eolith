@@ -85,7 +85,6 @@ footer img {
     margin-top: 4em;
     width: 100%;
     position: fixed;
-
     mix-blend-mode: difference;
 }
 .info {
@@ -97,6 +96,7 @@ footer img {
     mix-blend-mode: difference;
     margin-bottom: 2em;
 }
+
 .hero {
     width: 100%;
     height: auto;
