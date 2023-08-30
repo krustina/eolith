@@ -21,10 +21,10 @@ const FooterContainer = styled.footer`
     bottom: 0;
     max-width: inherit;
     width: inherit;
+    mix-blend-mode: difference;
 `;
 const Logo = styled.img`
-    width: 25%;
-    filter: invert(1);
+    width: 12rem;
 `;
 
 const Announcement = styled.div``;

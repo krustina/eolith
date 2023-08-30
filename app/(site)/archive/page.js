@@ -1,5 +1,4 @@
 import { getExhibitions } from "../../sanity/sanity-utils";
-import styled from "styled-components";
 
 export default async function Archive() {
     const exhibitions = await getExhibitions();

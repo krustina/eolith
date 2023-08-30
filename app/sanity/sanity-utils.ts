@@ -14,6 +14,25 @@ export async function getExhibitions() {
         }`
     );
 }
+export async function getExhibition(slug) {
+    const client = createClient({
+        projectId: "26ygkesq",
+        dataset: "production",
+        apiVersion: "2021-10-21",
+    });
+
+    return client.fetch(
+        groq`
+        *[_type == "exhibitions" && slug.current == $slug][0] {
+            ...,
+            "documentation": documentation[]{
+                ...,
+                "asset": asset->url
+            }         
+        }`,
+        { slug }
+    );
+}
 
 export async function getHomePage() {
     const client = createClient({

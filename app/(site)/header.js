@@ -9,12 +9,9 @@ export default async function Header() {
 
     return (
         <NavBar>
-            <Link href="/">
-                {exhibitions.current ? <>Current</> : <>Upcoming</>}
-            </Link>
+            <Link href="/">Latest</Link>
             <Link href="/archive">Archive</Link>
             <Link href="/about">About</Link>
-            <Link href="/press">Press</Link>
             <a href="https://www.instagram.com/e.olith/" target="_blank">
                 @eolith
             </a>
@@ -29,4 +26,6 @@ const NavBar = styled.header`
     top: 0;
     max-width: inherit;
     width: inherit;
+    color: white;
+    mix-blend-mode: difference;
 `;
