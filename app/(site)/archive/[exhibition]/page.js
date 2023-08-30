@@ -1,22 +1,24 @@
 "use client";
 
-import { getLatestExhibition } from "../sanity/sanity-utils";
+import { getExhibition } from "../../../sanity/sanity-utils";
 
-export default async function Home() {
-    const latest = await getLatestExhibition();
+export default async function Exhibition({ params }) {
+    const slug = params.exhibition;
+
+    const exhibition = await getExhibition(slug);
 
     return (
         <main className="main">
             <div className="subheader">
                 <div className="info">
-                    <p>{latest.title}</p>
-                    <p>{latest.location}</p>
+                    <p>{exhibition.title}</p>
+                    <p>{exhibition.location}</p>
                     <p>
-                        {latest.startDate} - {latest.endDate}
+                        {exhibition.startDate} - {exhibition.endDate}
                     </p>
 
                     <ul className="artists">
-                        {latest.artists.map((artist) => (
+                        {exhibition.artists.map((artist) => (
                             <li>
                                 {artist.link ? (
                                     <a href={artist.link} target="_blank">
@@ -31,28 +33,30 @@ export default async function Home() {
                 </div>
             </div>
 
-            {latest.heroImg && <img className="hero" src={latest.heroImg} />}
+            {exhibition.heroImg && (
+                <img className="hero" src={exhibition.heroImg} />
+            )}
 
-            {latest.documentation &&
-                latest.documentation.map((image) => (
+            {exhibition.documentation &&
+                exhibition.documentation.map((image) => (
                     <div className="img-container">
                         <img src={image.asset} />
                         <figcaption>{image.caption}</figcaption>
                     </div>
                 ))}
 
-            {latest.exhibitionText &&
-                latest.exhibitionText.map((paragraph, key) => {
+            {exhibition.exhibitionText &&
+                exhibition.exhibitionText.map((paragraph, key) => {
                     <p key={key}>
                         {paragraph.children.map((child) => (
                             <>{child.text}</>
                         ))}
                     </p>;
                 })}
-            {latest.press && (
+            {exhibition.press && (
                 <>
                     <p>Press</p>
-                    {latest.press.map((source) => (
+                    {exhibition.press.map((source) => (
                         <div className="info">
                             <a href={source.link} target="_blank">
                                 {source.title}

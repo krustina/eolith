@@ -54,7 +54,7 @@ export default {
             title: "Start date",
             type: "date",
             options: {
-                dateFormat: "YYYY-MM-DD",
+                dateFormat: "DD MMM YYYY",
             },
 
             validation: (Rule) => Rule.required(),
@@ -64,7 +64,7 @@ export default {
             title: "End date",
             type: "date",
             options: {
-                dateFormat: "YYYY-MM-DD",
+                dateFormat: "DD MMM YYYY",
             },
         },
         {
@@ -75,11 +75,10 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
-            name: "exhibitionText",
-            title: "Exhibition Text",
-            description: "Add exhibition write up here",
-            type: "array",
-            of: [{ type: "block" }],
+            name: "heroImg",
+            description:
+                "Main exhibition image that will preceed all other documentation",
+            type: "image",
         },
         {
             name: "documentation",
@@ -102,6 +101,13 @@ export default {
             options: {
                 layout: "grid",
             },
+        },
+        {
+            name: "exhibitionText",
+            title: "Exhibition Text",
+            description: "Add exhibition write up here",
+            type: "array",
+            of: [{ type: "block" }],
         },
         {
             name: "press",

@@ -25,6 +25,7 @@ export async function getExhibition(slug) {
         groq`
         *[_type == "exhibitions" && slug.current == $slug][0] {
             ...,
+            "heroImg": heroImg.asset->url,
             "documentation": documentation[]{
                 ...,
                 "asset": asset->url
@@ -44,6 +45,7 @@ export async function getLatestExhibition() {
         groq`
     *[_type == "exhibitions"][-1] {
             ...,
+            "heroImg": heroImg.asset->url,
             "documentation": documentation[]{
                 ...,
                 "asset": asset->url

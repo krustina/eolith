@@ -4,20 +4,28 @@ body {
     margin: 0;
     height: 100vh;
     font-family: "Arial Narrow", Arial, sans-serif;
-    color: black;
+    font-size: 16px;
     background-color: white;
+    cursor: crosshair;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
+    color: white;
 }
 
 a {
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    /* cursor: cell; */
+}
 a:visited {
     color: white;
+    mix-blend-mode: difference;
 }
 .container {
     display: flex;
@@ -26,20 +34,22 @@ a:visited {
     width: 100%;
 }
 .body-wrap {
-    padding-top: 25px;
+    padding-top: 75px;
+    padding-bottom: 75px;
 }
 
 /* Header */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    height: auto;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    height: 1fr;
+    column-gap: 2em;
     position: fixed;
     top: 0;
     max-width: inherit;
     width: inherit;
-    color: white;
     mix-blend-mode: difference;
 }
 
@@ -64,23 +74,38 @@ footer img {
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-bottom: 75px;
+}
+.main p,
+.main figcaption {
+    mix-blend-mode: difference;
 }
 
 .subheader {
     margin-top: 4em;
     width: 100%;
     position: fixed;
-    color: white;
+
     mix-blend-mode: difference;
 }
-.exhibition-info {
-    display: flex;
-    justify-content: space-between;
+.info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 2em;
     width: inherit;
+    mix-blend-mode: difference;
+    margin-bottom: 2em;
+}
+.hero {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
 }
 .artists {
     padding: 0;
     list-style: none;
+    line-height: 24px;
 }
 .img-container {
     margin-bottom: 2em;
@@ -98,7 +123,7 @@ footer img {
 .img-container:nth-child(even) {
     width: 65%;
 }
-.img-container figcaption {
+figcaption {
     font-size: 12px;
     margin: 0px;
 }

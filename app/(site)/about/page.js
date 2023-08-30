@@ -5,8 +5,15 @@ export default async function About() {
 
     return (
         <div className="body-wrap">
-            <p>{about.aboutUs}</p>
-            <p>For all inquiries, please contact {about.contact}</p>
+            <div className="info">
+                <p>{about.aboutUs}</p>
+                <p>
+                    For all inquiries, please contact{" "}
+                    <a href={`mailto:${about.contact}?subject=hello`}>
+                        {about.contact}
+                    </a>
+                </p>
+            </div>
         </div>
     );
 }
