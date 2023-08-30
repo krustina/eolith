@@ -14,12 +14,5 @@ export default {
             title: "Show Announcement Bar?",
             type: "boolean",
         },
-        {
-            name: "landingImg",
-            title: "Hero Image",
-            description:
-                "Image you see on landing. Add logo file (.JPEG, .SVG, .PNG, .GIF)",
-            type: "image",
-        },
     ],
 };

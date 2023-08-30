@@ -17,11 +17,11 @@ export default async function Exhibition({ params }) {
                         {exhibition.startDate} - {exhibition.endDate}
                     </p>
 
-                    <ul className="artists">
+                    {/* <ul className="artists">
                         {exhibition.artists.map((artist) => (
                             <li>{artist}</li>
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
             {exhibition.documentation.map((image) => (

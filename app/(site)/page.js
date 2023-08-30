@@ -15,11 +15,11 @@ export default async function Home() {
                         {latest.startDate} - {latest.endDate}
                     </p>
 
-                    <ul className="artists">
+                    {/* <ul className="artists">
                         {latest.artists.map((artist) => (
                             <li>{artist}</li>
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
             {latest.documentation.map((image) => (

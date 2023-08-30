@@ -10,25 +10,6 @@ export default {
             type: "image",
             validation: (Rule) => Rule.required(),
         },
-
-        {
-            name: "backgroundColour",
-            title: "Background colour",
-            description: "Global background colour",
-            type: "color",
-        },
-        {
-            name: "primaryTextColour",
-            title: "Primary Text Colour",
-            description: "Global text colour",
-            type: "color",
-        },
-        {
-            name: "secondaryTextColour",
-            title: "Secondary Text Colour",
-            description: "Highlight Colour",
-            type: "color",
-        },
         {
             name: "metaImg",
             title: "Meta Image",

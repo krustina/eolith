@@ -8,7 +8,7 @@ export default async function Header() {
 
     return (
         <header>
-            <Link href="/">Latest</Link>
+            <Link href="/">Recent</Link>
             <Link href="/archive">Archive</Link>
             <Link href="/about">About</Link>
             <a href="https://www.instagram.com/e.olith/" target="_blank">
