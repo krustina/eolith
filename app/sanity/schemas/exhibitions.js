@@ -74,12 +74,7 @@ export default {
             type: "string",
             validation: (Rule) => Rule.required(),
         },
-        {
-            name: "heroImg",
-            description:
-                "Main exhibition image that will preceed all other documentation",
-            type: "image",
-        },
+
         {
             name: "documentation",
             description:
@@ -110,6 +105,11 @@ export default {
             of: [{ type: "block" }],
         },
         {
+            name: "heroImg",
+            title: "Featured Image",
+            type: "image",
+        },
+        {
             name: "press",
             description: "Add all press associated with exhibition.",
             title: "Press",
@@ -127,14 +127,6 @@ export default {
                             name: "source",
                             title: "Source",
                             type: "string",
-                        },
-                        {
-                            name: "pressDate",
-                            title: "Date",
-                            type: "date",
-                            options: {
-                                dateFormat: "YYYY-MM-DD",
-                            },
                         },
                         {
                             name: "link",

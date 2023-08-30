@@ -1,4 +1,5 @@
 import { getAbout } from "../../sanity/sanity-utils";
+import { PortableText } from "@portabletext/react";
 
 export default async function About() {
     const about = await getAbout();
@@ -6,7 +7,10 @@ export default async function About() {
     return (
         <div className="body-wrap">
             <div className="info">
-                <p>{about.aboutUs}</p>
+                <div>
+                    <PortableText value={about.aboutUs} />
+                </div>
+
                 <p>
                     For all inquiries, please contact{" "}
                     <a href={`mailto:${about.contact}?subject=hello`}>
