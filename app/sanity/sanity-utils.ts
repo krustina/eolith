@@ -34,6 +34,25 @@ export async function getExhibition(slug) {
     );
 }
 
+export async function getLatestExhibition() {
+    const client = createClient({
+        projectId: "26ygkesq",
+        dataset: "production",
+        apiVersion: "2021-10-21",
+    });
+    return client.fetch(
+        groq`
+    *[_type == "exhibitions"][-1] {
+            ...,
+            "documentation": documentation[]{
+                ...,
+                "asset": asset->url
+            }     
+        }
+    `
+    );
+}
+
 export async function getHomePage() {
     const client = createClient({
         projectId: "26ygkesq",
