@@ -17,5 +17,88 @@ a {
     text-decoration: none;
 }
 a:visited {
-    color: inherit;
+    color: white;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.body-wrap {
+    padding-top: 25px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    position: fixed;
+    top: 0;
+    max-width: inherit;
+    width: inherit;
+    color: white;
+    mix-blend-mode: difference;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    max-width: inherit;
+    width: inherit;
+    mix-blend-mode: difference;
+}
+
+footer img {
+    width: 12rem;
+}
+
+/* Exhibitions */
+
+.main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subheader {
+    margin-top: 4em;
+    width: 100%;
+    position: fixed;
+    color: white;
+    mix-blend-mode: difference;
+}
+.exhibition-info {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+}
+.artists {
+    padding: 0;
+    list-style: none;
+}
+.img-container {
+    margin-bottom: 2em;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.img-container:nth-child(odd) {
+    width: 50%;
+    align-self: flex-end;
+}
+
+.img-container:nth-child(even) {
+    width: 65%;
+}
+.img-container figcaption {
+    font-size: 12px;
+    margin: 0px;
 }

@@ -2,7 +2,6 @@
 
 import Head from "next/head";
 import "../styles/global.css";
-import styled from "styled-components";
 import Header from "./header";
 import Footer from "./footer";
 
@@ -16,18 +15,12 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <Head>{/* figure out what goes here */}</Head>
             <body>
-                <Container>
+                <div className="container">
                     <Header />
                     {children}
                     <Footer />
-                </Container>
+                </div>
             </body>
         </html>
     );
 }
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-`;

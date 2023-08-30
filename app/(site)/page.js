@@ -1,17 +1,9 @@
 "use client";
 
-import { getExhibition } from "../sanity/sanity-utils";
+import { getExhibitions } from "../sanity/sanity-utils";
 
 export default async function Home() {
-    const exhibition = await getExhibition();
+    const exhibition = await getExhibitions();
 
-    return (
-        <>
-            {exhibition.current ? (
-                <Exhibition />
-            ) : (
-                <>New Programming Fall 2023/2024 TBA</>
-            )}
-        </>
-    );
+    return <div className="body-wrap">hello</div>;
 }
