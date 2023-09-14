@@ -16,19 +16,21 @@ export default async function Home() {
                         {latest.startDate} - {latest.endDate}
                     </p>
 
-                    <ul className="artists">
-                        {latest.artists.map((artist) => (
-                            <li>
-                                {artist.link ? (
-                                    <a href={artist.link} target="_blank">
-                                        {artist.name}
-                                    </a>
-                                ) : (
-                                    <>{artist.name}</>
-                                )}
-                            </li>
-                        ))}
-                    </ul>
+                    {latest.artists && (
+                        <ul className="artists">
+                            {latest.artists.map((artist) => (
+                                <li>
+                                    {artist.link ? (
+                                        <a href={artist.link} target="_blank">
+                                            {artist.name}
+                                        </a>
+                                    ) : (
+                                        <>{artist.name}</>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
             </div>
 

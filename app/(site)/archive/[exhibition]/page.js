@@ -53,7 +53,7 @@ export default async function Exhibition({ params }) {
 
             {exhibition.press && (
                 <>
-                    <p>Press</p>
+                    <p>PRESS</p>
                     <br />
                     {exhibition.press.map((source) => (
                         <div className="info">

@@ -43,7 +43,7 @@ export async function getLatestExhibition() {
     });
     return client.fetch(
         groq`
-    *[_type == "exhibitions"][-1] {
+    *[_type == "exhibitions"][hpDisplay == true][0] {
             ...,
             "heroImg": heroImg.asset->url,
             "documentation": documentation[]{

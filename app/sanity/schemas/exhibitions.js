@@ -26,6 +26,17 @@ export default {
             },
         },
         {
+            title: "Display on homepage?",
+            description: "When false, displays nothing on homepage.",
+            name: "hpDisplay",
+            type: "boolean",
+        },
+        {
+            title: "Display in archive?",
+            name: "archive",
+            type: "boolean",
+        },
+        {
             name: "artists",
             title: "Artists",
             description: "Add artist(s)",
