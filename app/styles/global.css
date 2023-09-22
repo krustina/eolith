@@ -1,0 +1,132 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 16px;
+    background-color: white;
+    cursor: crosshair;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: white;
+}
+*::selection {
+    background-color: red;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    /* cursor: cell; */
+}
+a:visited {
+    color: white;
+    mix-blend-mode: difference;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.body-wrap {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+/* Header */
+
+header {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 2em;
+    position: fixed;
+    top: 0;
+    max-width: inherit;
+    width: inherit;
+    mix-blend-mode: difference;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    max-width: inherit;
+    width: inherit;
+    mix-blend-mode: difference;
+}
+
+footer img {
+    width: 12rem;
+}
+
+/* Exhibitions */
+
+.main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 75px;
+}
+.main p,
+.main figcaption {
+    mix-blend-mode: difference;
+}
+
+.subheader {
+    margin-top: 4em;
+    width: 100%;
+    position: fixed;
+    mix-blend-mode: difference;
+}
+.info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 2em;
+    width: inherit;
+    mix-blend-mode: difference;
+    margin-bottom: 2em;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+}
+.artists {
+    padding: 0;
+    list-style: none;
+    line-height: 24px;
+}
+.img-container {
+    margin-bottom: 2em;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.img-container:nth-child(odd) {
+    width: 75%;
+    align-self: flex-end;
+}
+
+.img-container:nth-child(even) {
+    width: 75%;
+}
+figcaption {
+    font-size: 10px;
+    margin: 0px;
+    text-transform: uppercase;
+}
