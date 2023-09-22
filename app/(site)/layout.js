@@ -7,7 +7,7 @@ import Footer from "./footer";
 
 const metadata = {
     title: "eolith",
-    description: "eolith is a curatorial project from Montreal, Canada",
+    description: "eolith is a curatorial project from Montréal, Canada",
 };
 
 export default function RootLayout({ children }) {
