@@ -4,7 +4,6 @@ import { getLatestExhibition } from "../sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
 export default async function Home() {
-    await new Promise((resolve) => setTimeout(resolve, 3000));
     const latest = await getLatestExhibition();
 
     return (
