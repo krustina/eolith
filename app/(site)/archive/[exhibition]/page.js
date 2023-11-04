@@ -1,15 +1,25 @@
 // THIS IS THE EXHIBITION PAGE
 
-"use client";
+// "use client";
 
 import { getExhibition } from "../../../sanity/sanity-utils";
+
 import { PortableText } from "@portabletext/react";
+
+export async function generateMetadata({ params }) {
+    const slug = params.exhibition;
+
+    const exhibition = await getExhibition(slug);
+
+    return {
+        title: exhibition.title,
+    };
+}
 
 export default async function Exhibition({ params }) {
     const slug = params.exhibition;
 
     const exhibition = await getExhibition(slug);
-
     return (
         <main className="main">
             <div className="subheader">

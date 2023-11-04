@@ -1,11 +1,8 @@
 "use client";
 
 import Link from "next/link";
-// import { getExhibitions } from "../sanity/sanity-utils";
 
 export default function Header() {
-    // const exhibitions = await getExhibitions();
-
     return (
         <header>
             <Link href="/">LATEST</Link>

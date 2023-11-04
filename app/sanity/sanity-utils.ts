@@ -55,23 +55,6 @@ export async function getLatestExhibition() {
     );
 }
 
-export async function getHomePage() {
-    const client = createClient({
-        projectId: "26ygkesq",
-        dataset: "production",
-        apiVersion: "2021-10-21",
-    });
-
-    return client.fetch(
-        groq`
-        *[_type == "homepage" ] {
-            _id,
-            announcement,
-            announcementVisible,
-        }[0]`
-    );
-}
-
 export async function getAbout() {
     const client = createClient({
         projectId: "26ygkesq",
@@ -98,9 +81,24 @@ export async function getSettings() {
         groq`
          *[_type == "global" ] {
             _id,
-            meta,
-            "metaImg": metaImg.asset->url,
-            "logo": logo.asset->url
+            "logo": logo.asset->url,
         }[0]`
     );
 }
+
+// export async function getHomePage() {
+//     const client = createClient({
+//         projectId: "26ygkesq",
+//         dataset: "production",
+//         apiVersion: "2021-10-21",
+//     });
+
+//     return client.fetch(
+//         groq`
+//         *[_type == "homepage" ] {
+//             _id,
+//             announcement,
+//             announcementVisible,
+//         }[0]`
+//     );
+// }
