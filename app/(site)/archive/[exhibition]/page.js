@@ -1,3 +1,5 @@
+// THIS IS THE EXHIBITION PAGE
+
 "use client";
 
 import { getExhibition } from "../../../sanity/sanity-utils";
@@ -53,7 +55,7 @@ export default async function Exhibition({ params }) {
 
             {exhibition.press && (
                 <>
-                    <p>PRESS</p>
+                    <p className="press">PRESS</p>
                     <br />
                     {exhibition.press.map((source) => (
                         <div className="info">
@@ -61,6 +63,8 @@ export default async function Exhibition({ params }) {
                             <a href={source.link} target="_blank">
                                 {source.title}
                             </a>
+                            <span></span>
+                            <span></span>
                         </div>
                     ))}
                 </>

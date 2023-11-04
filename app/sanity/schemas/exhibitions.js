@@ -26,14 +26,9 @@ export default {
             },
         },
         {
-            title: "Display on homepage?",
-            description: "When false, displays nothing on homepage.",
+            title: "Current Exhibition?",
+            description: "ON = show on homepage • OFF = archived",
             name: "hpDisplay",
-            type: "boolean",
-        },
-        {
-            title: "Display in archive?",
-            name: "archive",
             type: "boolean",
         },
         {

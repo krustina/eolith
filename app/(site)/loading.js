@@ -3,7 +3,7 @@
 export default function Loading() {
     return (
         <main>
-            <p className="loader">Loading</p>
+            <p className="loader margin">Loading</p>
         </main>
     );
 }

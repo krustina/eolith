@@ -1,3 +1,5 @@
+// THIS IS THE ARCHIVE PAGE
+
 import { getExhibitions } from "../../sanity/sanity-utils";
 import Link from "next/link";
 
@@ -25,7 +27,6 @@ export default async function Archive() {
             ) : (
                 <p>The archive is empty...</p>
             )}
-            {}
         </div>
     );
 }
