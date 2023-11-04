@@ -55,7 +55,10 @@ export default async function Home() {
                     )}
 
                     {latest.heroImg && (
-                        <img className="hero" src={latest.heroImg} />
+                        <img
+                            className="hero"
+                            src={latest.heroImg + "?fm=webp&q=80"}
+                        />
                     )}
 
                     {latest.press && (

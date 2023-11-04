@@ -50,7 +50,10 @@ export default async function Exhibition({ params }) {
             )}
 
             {exhibition.heroImg && (
-                <img className="hero" src={exhibition.heroImg} />
+                <img
+                    className="hero"
+                    src={exhibition.heroImg + "?fm=webp&q=80"}
+                />
             )}
 
             {exhibition.press && (
