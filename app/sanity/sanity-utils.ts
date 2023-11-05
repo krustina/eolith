@@ -81,7 +81,10 @@ export async function getSettings() {
         groq`
          *[_type == "global" ] {
             _id,
+            meta,
+            "metaImg": metaImg.asset->url,
             "logo": logo.asset->url,
+            "favicon": favicon.asset->url,
         }[0]`
     );
 }
