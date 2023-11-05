@@ -1,13 +1,25 @@
-"use client";
+// THIS IS THE EXHIBITION PAGE
+
+// "use client";
 
 import { getExhibition } from "../../../sanity/sanity-utils";
+
 import { PortableText } from "@portabletext/react";
+
+export async function generateMetadata({ params }) {
+    const slug = params.exhibition;
+
+    const exhibition = await getExhibition(slug);
+
+    return {
+        title: exhibition.title,
+    };
+}
 
 export default async function Exhibition({ params }) {
     const slug = params.exhibition;
 
     const exhibition = await getExhibition(slug);
-
     return (
         <main className="main">
             <div className="subheader">
@@ -37,7 +49,7 @@ export default async function Exhibition({ params }) {
             {exhibition.documentation &&
                 exhibition.documentation.map((image) => (
                     <div className="img-container">
-                        <img src={image.asset} />
+                        <img src={image.asset + "?fm=webp&q=80"} />
                         <figcaption>{image.caption}</figcaption>
                     </div>
                 ))}
@@ -48,12 +60,15 @@ export default async function Exhibition({ params }) {
             )}
 
             {exhibition.heroImg && (
-                <img className="hero" src={exhibition.heroImg} />
+                <img
+                    className="hero"
+                    src={exhibition.heroImg + "?fm=webp&q=80"}
+                />
             )}
 
             {exhibition.press && (
                 <>
-                    <p>PRESS</p>
+                    <p className="press">PRESS</p>
                     <br />
                     {exhibition.press.map((source) => (
                         <div className="info">
@@ -61,6 +76,8 @@ export default async function Exhibition({ params }) {
                             <a href={source.link} target="_blank">
                                 {source.title}
                             </a>
+                            <span></span>
+                            <span></span>
                         </div>
                     ))}
                 </>

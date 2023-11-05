@@ -1,6 +1,10 @@
 import { getAbout } from "../../sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
 
+export const metadata = {
+    title: "Info",
+};
+
 export default async function About() {
     const about = await getAbout();
 

@@ -6,7 +6,8 @@ export default {
         {
             name: "logo",
             title: "Logo",
-            description: "Add logo file (.JPEG, .SVG, .PNG, .GIF)",
+            description:
+                "Add logo file (.JPEG, .SVG, .PNG, .GIF). Must be white to work with mix-blend-mode that is applied.",
             type: "image",
             validation: (Rule) => Rule.required(),
         },
@@ -24,6 +25,13 @@ export default {
             description:
                 "Description listed in search engine results/link share",
             type: "text",
+            validation: (Rule) => Rule.required(),
+        },
+        {
+            name: "favicon",
+            title: "Favicon",
+            description: "Website icon, tab icon, URL icon, or bookmark icon",
+            type: "image",
             validation: (Rule) => Rule.required(),
         },
     ],
