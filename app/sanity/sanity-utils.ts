@@ -29,7 +29,11 @@ export async function getExhibition(slug) {
             "documentation": documentation[]{
                 ...,
                 "asset": asset->url
-            }         
+            },
+            "addAssets": addAssets[]{
+                ...,
+                "asset": asset->url
+            }           
         }`,
         { slug }
     );
@@ -49,13 +53,17 @@ export async function getLatestExhibition() {
             "documentation": documentation[]{
                 ...,
                 "asset": asset->url
-            }     
+            },
+            "addAssets": addAssets[]{
+                ...,
+                "asset": asset->url
+            }    
         }
     `
     );
 }
 
-export async function getAbout() {
+export async function getInfo() {
     const client = createClient({
         projectId: "26ygkesq",
         dataset: "production",

@@ -53,14 +53,13 @@ export default async function Home() {
                             <PortableText value={latest.exhibitionText} />
                         </div>
                     )}
-
-                    {latest.heroImg && (
-                        <img
-                            className="hero"
-                            src={latest.heroImg + "?fm=webp&q=80"}
-                        />
-                    )}
-
+                    {latest.addAssets &&
+                        latest.addAssets.map((asset) => (
+                            <img
+                                className="hero"
+                                src={asset.asset + "?fm=webp&q=80"}
+                            />
+                        ))}
                     {latest.press && (
                         <>
                             <p className="press">Press</p>

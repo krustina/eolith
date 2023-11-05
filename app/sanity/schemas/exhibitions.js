@@ -80,7 +80,12 @@ export default {
             type: "string",
             validation: (Rule) => Rule.required(),
         },
-
+        {
+            name: "heroImg",
+            title: "Hero Image",
+            description: "Main exhibition image",
+            type: "image",
+        },
         {
             name: "documentation",
             description:
@@ -110,10 +115,28 @@ export default {
             type: "array",
             of: [{ type: "block" }],
         },
+
         {
-            name: "heroImg",
-            title: "Featured Image",
-            type: "image",
+            name: "addAssets",
+            description:
+                "Ex: Site map asset, show poster, etc.. Will appear at the bottom of the exhibition page before any press listings.",
+            title: "Additional Assets",
+            type: "array",
+            of: [
+                {
+                    type: "image",
+                    fields: [
+                        {
+                            name: "caption",
+                            type: "string",
+                            title: "Caption",
+                        },
+                    ],
+                },
+            ],
+            options: {
+                layout: "grid",
+            },
         },
         {
             name: "press",
