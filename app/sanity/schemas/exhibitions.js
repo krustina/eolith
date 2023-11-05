@@ -26,8 +26,9 @@ export default {
             },
         },
         {
-            title: "Current Exhibition?",
-            description: "ON = show on homepage • OFF = archived",
+            title: "Latest Exhibition?",
+            description:
+                "ON = show last exhibition on homepage • OFF = archived",
             name: "hpDisplay",
             type: "boolean",
         },

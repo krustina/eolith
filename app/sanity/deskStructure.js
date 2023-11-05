@@ -1,4 +1,4 @@
-import { ControlsIcon, HomeIcon, EditIcon } from "@sanity/icons";
+import { ControlsIcon, EditIcon } from "@sanity/icons";
 
 export const deskStructure = (S) =>
     S.list()
@@ -11,12 +11,12 @@ export const deskStructure = (S) =>
             S.listItem()
                 .title("About & Contact")
                 .icon(EditIcon)
-                .child(S.editor().schemaType("about").documentId("about")),
+                .child(S.editor().schemaType("info").documentId("info")),
 
             // List out the rest of the document types, but filter out the config type
             ...S.documentTypeListItems().filter(
                 (listItem) =>
-                    !["global", "homepage", "about"].includes(listItem.getId())
+                    !["global", "homepage", "info"].includes(listItem.getId())
             ),
             // Add a visual divider (optional)
             S.divider(),
