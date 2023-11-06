@@ -9,7 +9,7 @@ export default function Header() {
             <Link href="/archive">ARCHIVE</Link>
             <Link href="/info">INFO</Link>
             <a href="https://www.instagram.com/e.olith/" target="_blank">
-                @EOLITH
+                @E.OLITH
             </a>
         </header>
     );
