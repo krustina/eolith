@@ -7,7 +7,7 @@ export default function Header() {
         <header>
             <Link href="/">LATEST</Link>
             <Link href="/archive">ARCHIVE</Link>
-            <Link href="/about">INFO</Link>
+            <Link href="/info">INFO</Link>
             <a href="https://www.instagram.com/e.olith/" target="_blank">
                 @EOLITH
             </a>

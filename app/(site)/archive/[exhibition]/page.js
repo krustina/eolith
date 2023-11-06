@@ -59,12 +59,10 @@ export default async function Exhibition({ params }) {
                 </div>
             )}
 
-            {exhibition.heroImg && (
-                <img
-                    className="hero"
-                    src={exhibition.heroImg + "?fm=webp&q=80"}
-                />
-            )}
+            {exhibition.addAssets &&
+                exhibition.addAssets.map((asset) => (
+                    <img className="hero" src={asset.asset + "?fm=webp&q=80"} />
+                ))}
 
             {exhibition.press && (
                 <>

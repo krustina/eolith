@@ -1,7 +1,7 @@
 import homepage from "./homepage";
 import exhibitions from "./exhibitions";
-import about from "./about";
+import info from "./info";
 import global from "./global";
 
-const schemas = [homepage, exhibitions, about, global];
+const schemas = [homepage, exhibitions, info, global];
 export default schemas;

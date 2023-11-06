@@ -1,11 +1,11 @@
 export default {
-    name: "about",
+    name: "info",
     type: "document",
-    title: "About",
+    title: "info",
     fields: [
         {
             name: "aboutUs",
-            title: "About",
+            title: "about",
             type: "array",
             of: [{ type: "block" }],
         },
