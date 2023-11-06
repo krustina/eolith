@@ -181,10 +181,6 @@ header,
     p a {
         font-size: 16px;
     }
-    .img-container,
-    .text {
-        width: 60%;
-    }
     li {
         padding-bottom: 0;
     }
@@ -199,5 +195,11 @@ header,
     .text,
     .press {
         padding: 0;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .img-container,
+    .text {
+        width: 50%;
     }
 }
