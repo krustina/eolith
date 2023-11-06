@@ -12,7 +12,7 @@ export default async function Archive() {
 
     return (
         <div className="body-wrap">
-            {exhibitions.length > 1 ? (
+            {exhibitions.length > 0 ? (
                 exhibitions
                     .slice(0)
                     .reverse()

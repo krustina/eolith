@@ -5,6 +5,7 @@ export async function getExhibitions() {
         projectId: "26ygkesq",
         dataset: "production",
         apiVersion: "2021-10-21",
+        perspective: "published",
     });
 
     return client.fetch(
@@ -19,6 +20,7 @@ export async function getExhibition(slug) {
         projectId: "26ygkesq",
         dataset: "production",
         apiVersion: "2021-10-21",
+        perspective: "published",
     });
 
     return client.fetch(
@@ -44,6 +46,7 @@ export async function getLatestExhibition() {
         projectId: "26ygkesq",
         dataset: "production",
         apiVersion: "2021-10-21",
+        perspective: "published",
     });
     return client.fetch(
         groq`

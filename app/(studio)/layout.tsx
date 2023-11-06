@@ -1,5 +1,8 @@
 export const metadata = {
-    title: "Eolith",
+    title: {
+        default: "Eolith",
+        template: "Eolith • %s",
+    },
     description: "",
 };
 
