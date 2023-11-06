@@ -7,6 +7,7 @@ export default {
             name: "aboutUs",
             title: "about",
             type: "array",
+            validation: (Rule) => Rule.required(),
             of: [{ type: "block" }],
         },
         {
@@ -14,6 +15,7 @@ export default {
             title: "Contact",
             description: "Add email address(es), etc.",
             type: "array",
+            validation: (Rule) => Rule.required(),
             of: [
                 {
                     type: "string",

@@ -140,6 +140,7 @@ figcaption {
 }
 .text {
     width: 75%;
+    text-align: right;
 }
 /* Padding around mobile site */
 header,
