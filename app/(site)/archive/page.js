@@ -13,7 +13,7 @@ export default async function Archive() {
     return (
         <div className="body-wrap">
             {exhibitions.length > 0 ? (
-                exhibitions.slice(0).map((exhibition) => (
+                exhibitions.map((exhibition) => (
                     <Link
                         href={`/archive/${exhibition.slug.current}`}
                         key={exhibition._id}

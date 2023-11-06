@@ -168,4 +168,11 @@ export default {
             ],
         },
     ],
+    orderings: [
+        {
+            title: "Exhibition Date",
+            name: "exhibitionDateDesc",
+            by: [{ field: "startDate", direction: "desc" }],
+        },
+    ],
 };

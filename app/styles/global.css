@@ -126,7 +126,7 @@ li {
     padding-bottom: 8px;
 }
 .img-container {
-    margin-bottom: 2em;
+    margin-bottom: 2.25em;
     align-self: flex-start;
     width: 75%;
 }
@@ -137,9 +137,11 @@ figcaption {
     font-size: 12px;
     margin: 0px;
     text-align: right;
+    height: 0;
 }
 .text {
     width: 75%;
+    text-align: right;
 }
 /* Padding around mobile site */
 header,

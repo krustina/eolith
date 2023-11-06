@@ -1,8 +1,12 @@
 import "../styles/global.css";
+import localFont from "next/font/local";
+
 import { getSettings } from "../sanity/sanity-utils";
 
 import Header from "./header";
 import Footer from "./footer";
+
+const arialNarrow = localFont({ src: "../fonts/ARIALN.woff2" });
 
 export async function generateMetadata() {
     const settings = await getSettings();
@@ -46,7 +50,7 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body>
+            <body className={arialNarrow.className}>
                 <div className="container">
                     <Header />
                     {children}
