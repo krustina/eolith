@@ -16,7 +16,7 @@ export default async function Info() {
                 </div>
 
                 <p>
-                    For all inquiries, please contact
+                    For all inquiries, please contact{" "}
                     <a href={`mailto:${info.contact}?subject=hello`}>
                         {info.contact}
                     </a>
