@@ -54,8 +54,10 @@ export default async function Exhibition({ params }) {
                     </div>
                 ))}
             {exhibition.exhibitionText && (
-                <div className="text">
-                    <PortableText value={exhibition.exhibitionText} />
+                <div className="text-container">
+                    <div className="text">
+                        <PortableText value={exhibition.exhibitionText} />
+                    </div>
                 </div>
             )}
 

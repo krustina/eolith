@@ -49,8 +49,10 @@ export default async function Home() {
                             </div>
                         ))}
                     {latest.exhibitionText && (
-                        <div className="text">
-                            <PortableText value={latest.exhibitionText} />
+                        <div className="text-container">
+                            <div className="text">
+                                <PortableText value={latest.exhibitionText} />
+                            </div>
                         </div>
                     )}
                     {latest.addAssets &&
