@@ -75,10 +75,11 @@ footer {
     max-width: inherit;
     width: inherit;
     mix-blend-mode: difference;
+   
 }
 
 footer img {
-    width: 18rem;
+    width: 20rem;
 }
 
 /* Exhibitions */
