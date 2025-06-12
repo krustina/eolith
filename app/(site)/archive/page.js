@@ -1,6 +1,6 @@
 // THIS IS THE ARCHIVE PAGE
 
-import { getExhibitions } from "../../sanity/sanity-utils";
+import { getEolithExhibitions } from "../../sanity/sanity-utils";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 export default async function Archive() {
-    const exhibitions = await getExhibitions();
+    const exhibitions = await getEolithExhibitions();
 
     // Sort exhibitions by startDate in descending order (most recent first)
     const sortedExhibitions = exhibitions.sort((a, b) => {

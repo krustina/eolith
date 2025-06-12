@@ -13,8 +13,8 @@ export async function generateMetadata() {
 
     return {
         title: {
-            default: "Eolith",
-            template: "Eolith • %s",
+            default: "Ermitage",
+            template: "Ermitage • %s",
         },
         locale: "en_US",
         icons: {

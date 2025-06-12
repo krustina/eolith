@@ -10,11 +10,31 @@ export async function getExhibitions() {
 
     return client.fetch(
         groq`
-        *[_type == "exhibitions" ] {
-            ...
-        }`
+        *[
+        _type == "exhibitions" &&
+        hpDisplay != true &&
+        !(slug.current in ["inlandsis", "eolith", "the-new-motive-power", "inlandsis-at-l'imagier"])
+      ] | order(startDate desc) {
+        ...
+      }`
     );
 }
+export async function getEolithExhibitions () {
+    const client = createClient({
+        projectId: "26ygkesq",
+        dataset: "production",
+        apiVersion: "2021-10-21",
+        perspective: "published",
+    });
+
+    return client.fetch(
+        groq`
+        *[_type == "exhibitions" && slug.current in ["inlandsis", "eolith", "the-new-motive-power", "inlandsis-at-l'imagier"]] {
+  ...
+}`
+    );
+}
+
 export async function getExhibition(slug) {
     const client = createClient({
         projectId: "26ygkesq",
@@ -75,7 +95,7 @@ export async function getInfo() {
 
     return client.fetch(
         groq`
-        *[_type == "about" ] {
+        *[_type == "info" ] {
             ...
         }[0]`
     );

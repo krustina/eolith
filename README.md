@@ -1,6 +1,6 @@
-## EOLITH
+## ERMITAGE 
 
-A website for the emerging curatorial project 'Eolith' based out of Montreal.
+A website for the emerging curatorial project 'Ermitage' (formerly Eolith) based out of Montreal.
 
 Next.js 13 project with Sanity.io CMS and deployed on Vercel.
 

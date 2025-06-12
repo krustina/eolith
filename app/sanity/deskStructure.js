@@ -9,7 +9,7 @@ export const deskStructure = (S) =>
             //   .icon(HomeIcon)
             //   .child(S.editor().schemaType('homepage').documentId('homepage')),
             S.listItem()
-                .title("About & Contact")
+                .title("Info")
                 .icon(EditIcon)
                 .child(S.editor().schemaType("info").documentId("info")),
 

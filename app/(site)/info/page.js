@@ -13,14 +13,14 @@ export default async function Info() {
             <div className="info">
                 <div>
                     <PortableText value={info.aboutUs} />
+                    <br />
+                    <p>
+                        <i>By appointment only</i>
+                    </p>
                 </div>
 
-                <p>
-                    For all inquiries, please contact{" "}
-                    <a href={`mailto:${info.contact}?subject=hello`}>
-                        {info.contact}
-                    </a>
-                </p>
+                <a href="https://www.instagram.com/ermitage_308/" target="_blank">@ermitage_308</a>
+
             </div>
         </div>
     );

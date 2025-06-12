@@ -1,4 +1,4 @@
-// THIS IS THE HOMEPAGE / LATEST EXHIBITION
+// THIS IS THE HOMEPAGE / CURRENT EXHIBITION
 
 "use client";
 
@@ -14,11 +14,13 @@ export default async function Home() {
                 <>
                     <div className="subheader">
                         <div className="info">
-                            <p>{latest.title}</p>
-                            <p>{latest.location}</p>
-                            <p>
-                                {latest.startDate} - {latest.endDate}
-                            </p>
+                            {latest.title && latest.documentation && <p>{latest.title}</p>}
+                            {latest.location && <p>{latest.location}</p>}
+                            {latest.startDate && latest.endDate && (
+                                <p>
+                                    {latest.startDate} - {latest.endDate}
+                                </p>
+                            )}
 
                             {latest.artists && (
                                 <ul className="artists">
@@ -40,6 +42,10 @@ export default async function Home() {
                             )}
                         </div>
                     </div>
+
+                    {latest.heroImg && <div className="hero-img-container">
+                        <img src={latest.heroImg + "?fm=webp&q=80"} />
+                    </div>}
 
                     {latest.documentation &&
                         latest.documentation.map((image) => (

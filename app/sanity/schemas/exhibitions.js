@@ -26,9 +26,9 @@ export default {
             },
         },
         {
-            title: "Latest Exhibition?",
+            title: "Current Exhibition?",
             description:
-                "ON = show last exhibition on homepage • OFF = archived",
+                "ON = show current exhibition on homepage • OFF = archived",
             name: "hpDisplay",
             type: "boolean",
         },
@@ -79,7 +79,7 @@ export default {
             title: "Location",
             description: "ex: l`île-de-la-visitation or 45.575012, -73.661780",
             type: "string",
-            validation: (Rule) => Rule.required(),
+            // validation: (Rule) => Rule.required(),
         },
         {
             name: "heroImg",

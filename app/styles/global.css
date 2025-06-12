@@ -41,11 +41,11 @@ p a {
     width: 100%;
 }
 .body-wrap {
-    padding-top: 4em;
-    padding-bottom: 4em;
+    
     mix-blend-mode: difference;
     position: relative;
     z-index: 0;
+    padding: 4em 0px 4em 0px;
 }
 .margin {
     mix-blend-mode: difference;
@@ -75,6 +75,12 @@ footer {
     max-width: inherit;
     width: inherit;
     mix-blend-mode: difference;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 2em;
+    padding: 5px;
    
 }
 
@@ -90,6 +96,7 @@ footer img {
     display: flex;
     flex-direction: column;
     padding-bottom: 75px;
+    
 }
 .main p,
 .main figcaption {
@@ -126,7 +133,16 @@ footer img {
 li {
     padding-bottom: 8px;
 }
-.img-container {
+.hero-img-container {
+    margin-bottom: 2.25em;
+    align-self: flex-start;
+    width: 100%;
+}
+.hero-img-container img {
+    width: 100%;
+    /* margin-top: 2.25em; */
+}
+.img-container{
     margin-bottom: 2.25em;
     align-self: flex-start;
     width: 75%;
@@ -200,10 +216,13 @@ header,
     .info,
     .text,
     .press {
-        padding: 0;
+        padding: 5px;
     }
     .text {
         width: 60%;
+    }
+    .hero-img-container {
+        width: 75%;
     }
 }
 @media only screen and (min-width: 1200px) {

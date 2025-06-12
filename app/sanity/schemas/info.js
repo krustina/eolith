@@ -5,22 +5,10 @@ export default {
     fields: [
         {
             name: "aboutUs",
-            title: "about",
+            title: "About",
             type: "array",
             validation: (Rule) => Rule.required(),
             of: [{ type: "block" }],
-        },
-        {
-            name: "contact",
-            title: "Contact",
-            description: "Add email address(es), etc.",
-            type: "array",
-            validation: (Rule) => Rule.required(),
-            of: [
-                {
-                    type: "string",
-                },
-            ],
         },
     ],
 };

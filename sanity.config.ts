@@ -8,7 +8,7 @@ import schemas from "./app/sanity/schemas";
 const config = defineConfig({
     projectId: "26ygkesq",
     dataset: "production",
-    title: "Eolith",
+    title: "Ermitage",
     apiVersion: "2021-08-31",
     basePath: "/admin",
     plugins: [

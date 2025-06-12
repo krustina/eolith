@@ -1,7 +1,7 @@
 export const metadata = {
     title: {
-        default: "Eolith",
-        template: "Eolith • %s",
+        default: "Ermitage",
+        template: "Ermitage • %s",
     },
     description: "",
 };

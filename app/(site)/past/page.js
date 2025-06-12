@@ -28,12 +28,12 @@ export default async function Archive() {
                     >
                         <p>{exhibition.title}</p>
                         <p>
-                            {exhibition.startDate} - {exhibition.endDate}
+                            {exhibition.startDate} {exhibition.endDate && `- ${exhibition.endDate}`}
                         </p>
                     </Link>
                 ))
             ) : (
-                <p>The archive is empty...</p>
+                <p className="info">No exhibitions...</p>
             )}
         </div>
     );
