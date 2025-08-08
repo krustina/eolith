@@ -22,7 +22,7 @@ export default async function Archive() {
             {sortedExhibitions.length > 0 ? (
                 sortedExhibitions.map((exhibition) => (
                     <Link
-                        href={`/archive/${exhibition.slug.current}`}
+                        href={`/past/${exhibition.slug.current}`}
                         key={exhibition._id}
                         className="info"
                     >
