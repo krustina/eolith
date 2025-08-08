@@ -14,7 +14,7 @@ export default async function Home() {
                 <>
                     <div className="subheader">
                         <div className="info">
-                            {latest.title && latest.documentation && <p>{latest.title}</p>}
+                            {latest.title && <p>{latest.title}</p>}
                             {latest.location && <p>{latest.location}</p>}
                             {latest.startDate && latest.endDate && (
                                 <p>

@@ -4,7 +4,7 @@ import { getExhibitions } from "../../sanity/sanity-utils";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Archive",
+    title: "Past",
 };
 
 export default async function Archive() {
