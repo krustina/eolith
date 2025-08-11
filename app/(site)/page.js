@@ -44,13 +44,13 @@ export default async function Home() {
                     </div>
 
                     {latest.heroImg && <div className="hero-img-container">
-                        <img src={latest.heroImg + "?fm=webp&q=80"} />
+                        <img src={latest.heroImg + "?fm=webp&q=100"} />
                     </div>}
 
                     {latest.documentation &&
                         latest.documentation.map((image) => (
                             <div className="img-container">
-                                <img src={image.asset + "?fm=webp&q=80"} />
+                                <img src={image.asset + "?fm=webp&q=100"} />
                                 <figcaption>{image.caption}</figcaption>
                             </div>
                         ))}
@@ -65,7 +65,7 @@ export default async function Home() {
                         latest.addAssets.map((asset) => (
                             <img
                                 className="hero"
-                                src={asset.asset + "?fm=webp&q=80"}
+                                src={asset.asset + "?fm=webp&q=100"}
                             />
                         ))}
                     {latest.press && (
