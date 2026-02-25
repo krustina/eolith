@@ -7,6 +7,22 @@ export default {
     icon: SparklesIcon,
     type: "document",
     title: "Exhibitions",
+    orderings: [
+        {
+            title: 'Start Date, Newest first',
+            name: 'startDateDesc',
+            by: [
+                { field: 'startDate', direction: 'desc' }
+            ]
+        },
+        {
+            title: 'Start Date, Oldest first',
+            name: 'startDateAsc',
+            by: [
+                { field: 'startDate', direction: 'asc' }
+            ]
+        }
+    ],
     fields: [
         {
             name: "title",
