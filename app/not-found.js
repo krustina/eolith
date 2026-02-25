@@ -21,7 +21,7 @@ export default async function NotFound() {
             fontFamily: "Arial Narrow, Arial, sans-serif",
             cursor: 'crosshair',
             overflow: "hidden",
-            color: "white"
+            color: "white",
 
         }}>
             <h1 style={{ fontSize: "24px" }}>404<br />Page Not Found</h1>
