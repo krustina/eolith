@@ -12,7 +12,7 @@ export default async function NotFound() {
             bottom: 0,
             backgroundImage: `url(${settings.errorImg})`,
             backgroundSize: "cover",
-            backgroundPosition: "bottom",
+            backgroundPosition: "center",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
