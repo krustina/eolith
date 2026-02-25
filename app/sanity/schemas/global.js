@@ -34,5 +34,11 @@ export default {
             type: "image",
             validation: (Rule) => Rule.required(),
         },
+        {
+            name: "errorImg",
+            title: "404 Image",
+            description: "Image to display on the 404 page",
+            type: "image",
+        },
     ],
 };
