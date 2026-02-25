@@ -24,14 +24,14 @@ export default async function Exhibition({ params }) {
         <main className="main">
             <div className="subheader">
                 <div className="info">
-                    <p>{exhibition.title}</p>
-                    <p>{exhibition.location}</p>
+                    <p>{exhibition.title && exhibition.title}</p>
+                    <p>{exhibition.location && exhibition.location}</p>
                     <p>
-                        {exhibition.startDate} - {exhibition.endDate}
+                        {exhibition.startDate && exhibition.startDate} - {exhibition.endDate && exhibition.endDate}
                     </p>
 
                     <ul className="artists">
-                        {exhibition.artists.map((artist) => (
+                        {exhibition.artists && exhibition.artists.map((artist) => (
                             <li>
                                 {artist.link ? (
                                     <a href={artist.link} target="_blank">
