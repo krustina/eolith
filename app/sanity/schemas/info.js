@@ -17,5 +17,11 @@ export default {
             validation: (Rule) => Rule.required(),
             of: [{ type: "block" }],
         },
+        {
+            name: "errorImg",
+            title: "404 Image",
+            description: "Image to display on the 404 page",
+            type: "image",
+        },
     ],
 };

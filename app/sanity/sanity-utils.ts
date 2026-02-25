@@ -95,8 +95,9 @@ export async function getInfo() {
 
     return client.fetch(
         groq`
-        *[_type == "info" ] {
-            ...
+        *[_type == "info"] {
+        ...,
+        "errorImg": errorImg.asset->url,
         }[0]`
     );
 }
