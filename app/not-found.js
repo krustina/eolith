@@ -1,30 +1,31 @@
-import { getInfo } from "./sanity/sanity-utils";
+import { getSettings } from "./sanity/sanity-utils";
 
 
 export default async function NotFound() {
-    const info = await getInfo();
-
+    const settings = await getSettings();
     return (
         <div style={{
-            backgroundImage: `url(${info.errorImg})`,
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundImage: `url(${settings.errorImg})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundAttachment: "fixed",
-            minHeight: "100vh",
+            backgroundPosition: "bottom",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             textAlign: "center",
             fontFamily: "Arial Narrow, Arial, sans-serif",
-            fontSize: "13px",
             cursor: 'crosshair',
+            overflow: "hidden",
+            color: "white"
+
         }}>
-            <h1>404</h1>
-            <br />
-            <p>The page you are looking for does not exist!</p>
-            <br />
-            <a href="/">← BACK</a>
+            <h1 style={{ fontSize: "24px" }}>404<br />Page Not Found</h1>
+
         </div>
     )
 }

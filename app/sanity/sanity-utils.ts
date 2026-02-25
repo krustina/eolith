@@ -96,8 +96,7 @@ export async function getInfo() {
     return client.fetch(
         groq`
         *[_type == "info"] {
-        ...,
-        "errorImg": errorImg.asset->url,
+        ...
         }[0]`
     );
 }
@@ -117,6 +116,7 @@ export async function getSettings() {
             "metaImg": metaImg.asset->url,
             "logo": logo.asset->url,
             "favicon": favicon.asset->url,
+            "errorImg": errorImg.asset->url,
         }[0]`
     );
 }
