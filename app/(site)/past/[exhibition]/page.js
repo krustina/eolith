@@ -27,7 +27,11 @@ export default async function Exhibition({ params }) {
                     <p>{exhibition.title && exhibition.title}</p>
                     <p>{exhibition.location && exhibition.location}</p>
                     <p>
-                        {exhibition.startDate && exhibition.startDate} - {exhibition.endDate && exhibition.endDate}
+                        {exhibition.startDate && (
+                            exhibition.endDate 
+                            ? `${exhibition.startDate} - ${exhibition.endDate}`
+                            : exhibition.startDate
+                        )}
                     </p>
 
                     <ul className="artists">
